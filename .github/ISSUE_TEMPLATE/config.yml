@@ -1,0 +1,6 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 私密安全报告
+    url: https://github.com/
+    about: 请通过仓库 Security 页面提交 Private vulnerability report，不要公开个人信息。
+

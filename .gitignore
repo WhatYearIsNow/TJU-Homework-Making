@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+/wheelhouse/
+
+# Virtual environments and local settings
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.lnk
+
+# Runtime and generated artifacts
+/.cache/
+/build/
+/dist/
+/dist_installer/
+/debug/
+/outputs/
+/output/
+/tmp/
+*.log

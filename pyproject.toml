@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tju-homework-making"
+version = "0.1.0"
+description = "Detect, crop, and arrange problem images into printable A4 PDF worksheets."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["pdf", "computer-vision", "worksheet", "homework", "tkinter"]
+authors = [
+  { name = "TJU Homework Making contributors" },
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Win32 (MS Windows)",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+  "numpy>=1.26,<3.0",
+  "opencv-python>=4.10,<5.0",
+  "Pillow>=10.3,<12.0",
+  "reportlab>=4.2,<5.0",
+  "PyMuPDF>=1.24,<2.0",
+  "PyYAML>=6.0,<7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0,<10.0",
+]
+build = [
+  "PyInstaller>=6.0,<7.0",
+]
+
+[project.scripts]
+pdf-exam-formatter = "app.main:main"
+
+[project.gui-scripts]
+pdf-exam-formatter-gui = "app.gui:run_gui"
+
+[tool.setuptools]
+packages = ["app"]
+
+[tool.setuptools.data-files]
+"assets/branding" = [
+  "assets/branding/*.png",
+  "assets/branding/README.md",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

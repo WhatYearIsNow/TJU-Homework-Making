@@ -1,0 +1,48 @@
+name: Bug 报告
+description: 报告可复现的程序错误
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请先删除截图、日志和 PDF 中的学号、姓名及其他个人信息。
+  - type: input
+    id: version
+    attributes:
+      label: 项目版本
+      placeholder: 例如 0.1.0 或提交哈希
+    validations:
+      required: true
+  - type: dropdown
+    id: entry
+    attributes:
+      label: 使用入口
+      options:
+        - 源码 GUI
+        - 打包 GUI
+        - CLI
+        - 安装包
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 请提供最小、稳定的复现步骤。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期行为
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为与日志
+      description: 请移除个人信息和本机敏感路径。
+    validations:
+      required: true
+
